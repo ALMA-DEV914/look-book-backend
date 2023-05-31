@@ -87,6 +87,11 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../Client/build')));
 }
 
+app.get("/", (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.send("API is running");
+});
+    
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../Client/build/index.html'));
 });
