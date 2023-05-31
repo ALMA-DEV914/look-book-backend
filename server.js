@@ -21,10 +21,6 @@ require("dotenv").config()
 const app = express();
 const path = require("path");
 
-app.get("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.send("API is running");
-});
 //defining mongoose options
 const corsOptions = {
   origin: ["http://localhost:3000" , "https://look-book-act-group42.herokuapp.com/"],
