@@ -89,6 +89,9 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get("/", (req, res) => {
   res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+   res.setHeader("Content-type", "application/json");
+   res.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH,OPTIONS");
   res.send("API is running");
 });
     
